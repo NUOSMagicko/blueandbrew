@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-pink: #ff45f3;
+  --primary-pink-light: #ff98f3;
+  --primary-blue: #81e4e4;
+  --primary-yellow: #dcf066;
+  --primary-white: #f8f4ec;
+  --primary-black: #050a0e;
+}
+
+@layer base {
+  * {
+    @apply m-0 box-border p-0 font-sans outline-none focus:outline-none;
+  }
+
+  html {
+    @apply bg-primary-black;
+  }
+
+  /* Typography */
+  h1,
+  h2,
+  h3 {
+    @apply inline-block bg-gradient-to-br from-primary-blue via-white to-primary-pink bg-clip-text text-transparent;
+  }
+
+  h1 {
+    @apply font-aquire text-4xl uppercase md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  h2 {
+    @apply font-aquire text-2xl uppercase md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  h3 {
+    @apply font-aquire text-xl uppercase md:text-2xl lg:text-3xl;
+  }
+
+  body,
+  p {
+    @apply text-sm text-primary-white lg:text-base;
+  }
+
+  button {
+    @apply bg-none;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .scroll-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scroll-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
